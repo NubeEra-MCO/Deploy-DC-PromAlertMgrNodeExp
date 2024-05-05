@@ -1,0 +1,10 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:25'
+  smtp_from: 'nubeera.mujahed@gmail.com'
+route:
+  receiver: sales-team
+  group_by: [alertname]
+receivers:
+ - name: sales-team
+   email_configs:
+    - to: 'nubeera.mujahed@gmail.com'
